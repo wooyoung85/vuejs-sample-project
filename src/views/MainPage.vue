@@ -7,7 +7,7 @@
         </a>
         <div class="links">
           <a href="/about">About</a>
-          <a href="/products">Products</a>
+          <a href="/product">Products</a>
           <button class="button_med"><router-link to="/signup">Signup</router-link></button>
         </div>
       </nav>

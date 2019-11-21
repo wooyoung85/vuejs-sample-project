@@ -1,18 +1,22 @@
 <template>
   <div>
     <v-app v-if="!isMainPage()">
-      <v-app-bar app color="deep-orange" dark>
+      <v-app-bar app color="deep-orange lighten-2" dark>
+        <div class="nav-spacer"></div>
         <v-toolbar-title>
           <router-link to="/">
-            <v-img alt="Vuetify Logo" class="shrink mr-2" contain src="@/assets/images/main/logo.svg" transition="scale-transition" />
+            <v-img class="shrink mr-2" contain src="@/assets/images/main/logo.svg" transition="scale-transition" />
           </router-link>
         </v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-btn text rounded to="/products">Products</v-btn>
+        <v-btn text rounded to="/product">Products</v-btn>
         <v-btn text rounded to="/signup">Signup</v-btn>
+        <div class="nav-spacer"></div>
       </v-app-bar>
       <v-content>
-        <router-view />
+        <v-container>
+          <router-view />
+        </v-container>
       </v-content>
     </v-app>
     <router-view v-else />
@@ -37,3 +41,8 @@ export default {
   }
 };
 </script>
+<style>
+.nav-spacer{
+    flex-grow: 0.2 !important;
+}
+</style>

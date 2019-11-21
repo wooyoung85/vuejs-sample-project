@@ -1,0 +1,91 @@
+{
+  "cellphones": [
+    {
+      "id": "s1",
+      "brand": "samsung",
+      "name": "Galaxy S10",
+      "description" : "",
+      "support" : "welfare",
+      "variants": [
+        {
+          "variantId": 11,
+          "variantColor": "프리즘 그린",
+          "variantColorCode": "#32829D",
+          "variantImage": "A0ZA_001",
+          "variantQuantity": 10
+        },
+        {
+          "variantId": 12,
+          "variantColor": "프리즘 블랙",
+          "variantColorCode": "#231F20",
+          "variantImage": "A0Z6_001",
+          "variantQuantity": 2
+        },
+        {
+          "variantId": 13,
+          "variantColor": "프리즘 화이트",
+          "variantColorCode": "#D2EDF4",
+          "variantImage": "A0Z8_001",
+          "variantQuantity": 0
+        },
+        {
+          "variantId": 14,
+          "variantColor": "플라밍고 핑크",
+          "variantColorCode": "#F2756D",
+          "variantImage": "A13T_001",
+          "variantQuantity": 100
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "brand": "apple",
+      "name": "iPhone XR",
+      "support" : "cashbag",
+      "variants": [
+        {
+          "variantId": 21,
+          "variantColor": "옐로",
+          "variantColorCode": "#F9D045",
+          "variantImage": "A0QP_001",
+          "variantQuantity": 10
+        },
+        {
+          "variantId": 22,
+          "variantColor": "화이트",
+          "variantColorCode": "#F3F3F3",
+          "variantImage": "A0QM_001",
+          "variantQuantity": 2
+        },
+        {
+          "variantId": 23,
+          "variantColor": "Product Red",
+          "variantColorCode": "#B41325",
+          "variantImage": "A0QN_001",
+          "variantQuantity": 0
+        },
+        {
+          "variantId": 24,
+          "variantColor": "코럴",
+          "variantColorCode": "#FF6E5A",
+          "variantImage": "A0QQ_001",
+          "variantQuantity": 10
+        },
+        {
+          "variantId": 25,
+          "variantColor": "블루",
+          "variantColorCode": "#48AEE6",
+          "variantImage": "A0QR_001",
+          "variantQuantity": 0
+        },
+        {
+          "variantId": 26,
+          "variantColor": "블랙",
+          "variantColorCode": "#2E3034",
+          "variantImage": "A0PY_001",
+          "variantQuantity": 100
+        }
+      ]
+    }
+  ]
+}
