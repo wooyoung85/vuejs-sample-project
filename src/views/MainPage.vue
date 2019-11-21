@@ -7,8 +7,8 @@
         </a>
         <div class="links">
           <a href="/about">About</a>
-          <a href="#">Products</a>
-          <button class="button_med" href="#">Singup</button>
+          <a href="/products">Products</a>
+          <button class="button_med"><router-link to="/signup">Signup</router-link></button>
         </div>
       </nav>
     </header>
@@ -16,7 +16,7 @@
       <section class="info">
         <h1 class="main_title">Happy Family Mall</h1>
         <h2 class="main_info">Only authorized users can use it.</h2>
-        <button class="button_jumbo" href="#">Login</button>
+        <button class="button_jumbo" href="#"><router-link to="/login">Login</router-link></button>
       </section>
       <section class="features">
         <div class="feature">

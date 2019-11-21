@@ -93,6 +93,10 @@ button,
   transition: var(--transition);
 }
 
+#main-page .button_med a {
+  margin-right: 0px;
+}
+
 #main-page .button_med:hover {
   background-color: var(--accentHover);
 }
