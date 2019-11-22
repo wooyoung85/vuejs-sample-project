@@ -4,13 +4,11 @@
       <v-app-bar app color="deep-orange lighten-2" dark>
         <div class="nav-spacer"></div>
         <v-toolbar-title>
-          <router-link to="/">
-            <v-img class="shrink mr-2" contain src="@/assets/images/main/main_page_logo.svg" transition="scale-transition" />
-          </router-link>
+          <router-link to="/"><img src="@/assets/images/main/main_page_logo.svg" style="margin-top:5px" /></router-link>
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-btn text rounded to="/product">Products</v-btn>
-        <v-btn text rounded to="/signup">Signup</v-btn>
+        <v-btn text rounded to="/register">Register</v-btn>
         <div class="nav-spacer"></div>
       </v-app-bar>
       <v-content>

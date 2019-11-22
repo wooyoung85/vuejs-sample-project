@@ -1,8 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import MainPage from "../views/MainPage.vue";
-import SignupPage from '../views/SignupPage.vue'
-import LoginPage from '../views/LoginPage.vue'
+import RegisterUser from '../views/RegisterUser.vue'
+import LoginUser from '../views/LoginUser.vue'
 
 Vue.use(VueRouter);
 
@@ -13,14 +13,14 @@ const routes = [
     component: MainPage
   },
   {
-    path: "/signup",
-    name: "signup",
-    component: SignupPage
+    path: "/register",
+    name: "register",
+    component: RegisterUser
   },
   {
     path: "/login",
     name: "login",
-    component: LoginPage
+    component: LoginUser
   },
   {
     path: "/product",
@@ -29,7 +29,7 @@ const routes = [
     // this generates a separate chunk (product.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "product" */ "../views/ProductPage.vue")
+      import(/* webpackChunkName: "product" */ "../views/ProductList.vue")
   }
 ];
 

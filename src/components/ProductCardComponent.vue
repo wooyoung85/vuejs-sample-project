@@ -6,8 +6,8 @@
     <v-card-text class="text--primary" style="height:100px">
       <p>{{ product.description }}</p>
     </v-card-text>
-    <v-spacer></v-spacer>
     <v-card-actions>
+      <v-spacer></v-spacer>
       <v-btn color="orange" text>Share</v-btn>
       <v-btn color="orange" text>Explore</v-btn>
     </v-card-actions>

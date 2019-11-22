@@ -82,9 +82,9 @@ export default {
   methods: {
     onSubmitForm() {
       if (this.$refs.form.validate()) {
-        console.log("유효한 가입 신청");
+        //console.log("유효한 가입 신청");
       } else {
-        console.log("유효하지 않음");
+        //console.log("유효하지 않음");
       }
     },
     checkPassword() {
