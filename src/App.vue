@@ -5,7 +5,7 @@
         <div class="nav-spacer"></div>
         <v-toolbar-title>
           <router-link to="/">
-            <v-img class="shrink mr-2" contain src="@/assets/images/main/logo.svg" transition="scale-transition" />
+            <v-img class="shrink mr-2" contain src="@/assets/images/main/main_page_logo.svg" transition="scale-transition" />
           </router-link>
         </v-toolbar-title>
         <v-spacer></v-spacer>

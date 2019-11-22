@@ -1,13 +1,12 @@
 <template>
-  <v-card class="mx-auto" max-width="400">
+  <v-card class="mx-auto" min-height="450px">
     <v-img height="300px" :src="productImage">
     </v-img>
     <v-card-title style="color:black">{{ product.name }}</v-card-title>
-    <v-card-text class="text--primary">
-      <div>Whitehaven Beach</div>
-      <div>Whitsunday Island, Whitsunday Islands</div>
+    <v-card-text class="text--primary" style="height:100px">
+      <p>{{ product.description }}</p>
     </v-card-text>
-
+    <v-spacer></v-spacer>
     <v-card-actions>
       <v-btn color="orange" text>Share</v-btn>
       <v-btn color="orange" text>Explore</v-btn>

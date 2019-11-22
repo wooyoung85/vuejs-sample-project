@@ -13,13 +13,17 @@
       <v-spacer></v-spacer>
       <v-col cols="12" md="4">
         <h3>할인 방법</h3>
-        <v-overflow-btn
-          height="40px"
-          class="my-2"
+        <v-select
+          :value="selectedSupport"
           :items="support"
-          label="더 좋은 방법"
-          target="#dropdown-example"
-        ></v-overflow-btn>
+          menu-props="auto"
+          label="선택"
+          color="purple lighten-3"
+          prepend-icon="mdi-filter"
+          single-line
+          filled
+          @change="onChangeSupport"
+        ></v-select>
       </v-col>
     </v-row>
     <v-row no-gutters>
@@ -46,32 +50,51 @@ export default {
       companyList: ["samsung", "apple"],
       support: [
         {
+          text: "전체",
+          value: "all"
+        },
+        {
           text: "복지포인트 사용",
-          value: "welfare",
-          callback: () => console.log("wel")
+          value: "welfare"
         },
         {
           text: "캐시백 환급",
-          value: "cashbag",
-          callback: () => console.log("cash")
+          value: "cashbag"
         }
       ],
-      products: []
+      products: [],
+      selectedSupport: "all"
     };
   },
   computed: {
     productList() {
-      return this.products.filter(p => this.companyList.includes(p.brand));
+      if (this.selectedSupport !== "all") {
+        return this.products.filter(
+          p =>
+            this.companyList.includes(p.brand) &&
+            p.support === this.selectedSupport
+        );
+      } else {
+        return this.products.filter(
+          p =>
+            this.companyList.includes(p.brand)
+        );
+      }
+    }
+  },
+  methods: {
+    onChangeSupport(value) {
+      this.selectedSupport = value;
     }
   },
   created() {
     axios
-      .get("http://localhost:3000/cellphones") // Does a get request
+      .get("http://localhost:3000/cellphones")
       .then(response => {
-        this.products = response.data; // For now, logs out the response
+        this.products = response.data;
       })
       .catch(error => {
-        console.log("There was an error:", error.response); // Logs out the error
+        console.log("There was an error:", error.response);
       });
   }
 };

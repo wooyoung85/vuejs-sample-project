@@ -3,7 +3,7 @@
     <header>
       <nav>
         <a href="/">
-          <img class="logo" src="@/assets/images/main/logo.svg" alt="Happy Family Mall | Homepage" />
+          <img class="logo" src="@/assets/images/main/main_page_logo.svg" alt="Happy Family Mall | Homepage" />
         </a>
         <div class="links">
           <a href="/about">About</a>
