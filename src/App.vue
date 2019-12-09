@@ -9,7 +9,6 @@
         <v-spacer></v-spacer>
         <v-btn text rounded to="/product">Products</v-btn>
         <v-btn text rounded :to="{ name:'register' }">Register</v-btn>
-        <router-link :to="{ name: 'productDetail', params: { productId: 111 }}">Test</router-link>
         <div class="nav-spacer"></div>
       </v-app-bar>
       <v-content>
