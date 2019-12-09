@@ -42,7 +42,8 @@
 
 <script>
 import ProductCardComponent from "../components/ProductCardComponent";
-import axios from "axios";
+import ProductService from '@/services/ProductService.js'
+
 export default {
   components: { ProductCardComponent },
   data() {
@@ -69,13 +70,13 @@ export default {
   computed: {
     productList() {
       if (this.selectedSupport !== "all") {
-        return this.products.filter(
+        return this.$store.state.products.filter(
           p =>
             this.companyList.includes(p.brand) &&
             p.support === this.selectedSupport
         );
       } else {
-        return this.products.filter(
+        return this.$store.state.products.filter(
           p =>
             this.companyList.includes(p.brand)
         );
@@ -87,16 +88,18 @@ export default {
       this.selectedSupport = value;
     }
   },
+  // created() {
+  //   ProductService.getCellphones()
+  //     .then(response => {
+  //       this.products = response.data;
+  //     })
+  //     .catch(error => {
+  //       //console.log("Error Message:", error.response)
+  //     })
+  // }
   created() {
-    axios
-      .get("http://localhost:3000/cellphones")
-      .then(response => {
-        this.products = response.data;
-      })
-      .catch(error => {
-        console.log("There was an error:", error.response);
-      });
-  }
+    this.$store.dispatch('fetchProducts')
+  },
 };
 </script>
 

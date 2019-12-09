@@ -3,8 +3,11 @@ import VueRouter from "vue-router";
 import MainPage from "../views/MainPage.vue";
 import RegisterUser from '../views/RegisterUser.vue'
 import LoginUser from '../views/LoginUser.vue'
+import ProductDetail from '../views/ProductDetail.vue'
 
 Vue.use(VueRouter);
+
+const ProductList = () => { return import(/* webpackChunkName: "product" */ "../views/ProductList.vue")}
 
 const routes = [
   {
@@ -28,8 +31,12 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (product.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "product" */ "../views/ProductList.vue")
+    component: ProductList
+  },
+  {
+    path: "/product/:productId",
+    name: "productDetail",
+    component: ProductDetail
   }
 ];
 

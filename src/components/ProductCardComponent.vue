@@ -9,7 +9,7 @@
     <v-card-actions>
       <v-spacer></v-spacer>
       <v-btn color="orange" text>Share</v-btn>
-      <v-btn color="orange" text>Explore</v-btn>
+      <v-btn color="orange" text :to="{ name: 'productDetail', params: { productId: this.product.id }}">Explore</v-btn>
     </v-card-actions>
   </v-card>
 </template>
